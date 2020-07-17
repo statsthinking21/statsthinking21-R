@@ -7,6 +7,7 @@ output:
       in_header: google_analytics.html
   html_document: default
 ---
+
 # Hypothesis testing in R
 
 In this chapter we will present several examples of using R to perform hypothesis testing.
@@ -104,7 +105,7 @@ input_df <- tibble(id=seq(nRuns)) %>%
 
 sample_ttest <- function(sampSize=32){
   tt.result <- t.test(rnorm(sampSize))
-  return(tibble(pvalue=tt.result$p.value))
+  return(tibble(pvalue = tt.result$p.value))
 }
 
 # perform simulations
