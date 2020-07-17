@@ -34,6 +34,8 @@ NHANES_adult <- NHANES %>%
 
 ```
 
+In this chapter we will use R to undestand how to resample data and perform numerical simulations.
+
 ## Generating random samples (Section \@ref(generating-random-numbers))
 
 Here we will generate random samples from a number of different distributions and plot their histograms.
@@ -139,7 +141,7 @@ heightSample <-
 # create a function to collect a sample with replacement
 bootMedianHeight <- function(df) {
   bootSample <- sample_n(df, dim(df)[1], replace = TRUE)
-  return(tibble(medianHeight=median(bootSample$Height)))
+  return(tibble(medianHeight = median(bootSample$Height)))
 }
 
 input_df <- tibble(id=seq(nRuns)) %>%
@@ -147,9 +149,9 @@ input_df <- tibble(id=seq(nRuns)) %>%
 
 bootMeans <- do(input_df, bootMedianHeight(heightSample))
 
-bootCI <- tibble(`Lower CI limit`=quantile(bootMeans$medianHeight,.025),
-            Median=median(heightSample$Height),
-            `Upper CI limit`=quantile(bootMeans$medianHeight,.975)
+bootCI <- tibble(`Lower CI limit` = quantile(bootMeans$medianHeight, .025),
+            Median = median(heightSample$Height),
+            `Upper CI limit` = quantile(bootMeans$medianHeight, .975)
             )
 kable(bootCI)
 ```
