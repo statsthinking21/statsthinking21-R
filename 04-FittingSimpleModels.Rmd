@@ -8,7 +8,7 @@ output:
   html_document: default
 ---
 
-# Fitting simple models with R
+# Fitting simple models using R
 
 In this chapter we will focus on how to compute the measures of central tendency and variability that were covered in the previous chapter.  Most of these can be computed using a built-in R function, but we will show how to do them manually in order to give some intuition about how they work.
 
@@ -51,7 +51,7 @@ $$
 Let's say that we want to obtain the mean height for adults in the NHANES database (contained in the data `Height`).  We would sum the individual heights (using the `sum()` function) and then divide by the number of values:
 
 ```{r}
-sum(NHANES$Height)/length(NHANES$Height)
+sum(NHANES$Height) / length(NHANES$Height)
 ```
 
 This returns the value NA, because there are missing values for some rows, and the `sum()` function doesn't automatically handle those.  To address this, we could filter the data frame using `drop_na()` to drop rows with NA values for this variable:
@@ -61,7 +61,7 @@ height_noNA <- NHANES %>%
   drop_na(Height) %>%
   pull(Height)
 
-sum(height_noNA)/length(height_noNA)
+sum(height_noNA) / length(height_noNA)
 ```
 
 There is, of course, a built-in function in R called `mean()` that will compute the mean.  Like the `sum()` function, `mean()` will return NA if there are any NA values in the data:
