@@ -8,7 +8,7 @@ output:
   html_document: default
 ---
 
-# Summarizing data with R (with Lucy King)
+# Summarizing data using R (with Lucy King)
 
 This chapter will introduce you to how to summarize data using R, as well as providing an introduction to a popular set of R tools known as the "Tidyverse."
 
