@@ -50,7 +50,7 @@ y <- c(4, 5, 6, 7)
 z <- c(7, 8, 9, 10)
 
 # create the data frame
-myDataFrame <-
+my_data_frame <-
   tibble(
     n, #list each of your columns in the order you want them
     x,
@@ -58,13 +58,13 @@ myDataFrame <-
     z
   )
 
-myDataFrame
+my_data_frame
 ```
 
 Take a quick look at the properties of the data frame using `glimpse()`:
 
 ```{r}
-glimpse(myDataFrame) 
+glimpse(my_data_frame) 
 ```
 
 ### Selecting an element
@@ -74,52 +74,52 @@ There are various ways to access the contents within a data frame.
 #### Selecting a row or column by name
 
 ```{r}
-myDataFrame$x
+my_data_frame$x
 ```
 
 
 The first index refers to the row, the second to the column.
 
 ```{r}
-myDataFrame[1, 2]
+my_data_frame[1, 2]
 
-myDataFrame[2, 3]
+my_data_frame[2, 3]
 ```
 
 
 #### Selecting a row or column by index
 
 ```{r}
-myDataFrame[1, ]
+my_data_frame[1, ]
 
-myDataFrame[, 1]
+my_data_frame[, 1]
 ```
 
 #### Select a set of rows 
 
 ```{r}
-myDataFrame %>% 
+my_data_frame %>% 
   slice(1:2) 
 ```
 
 `slice()` is a function that selects out rows based on their row number.
 
-You will also notice something we haven't discussed before: `%>%`.  This is called a "pipe", which is commonly used within the tidyverse; you can read more [here](http://magrittr.tidyverse.org/). A pipe takes the output from one command and feeds it as input to the next command. In this case, simply writing the name of the data frame (myDataFrame) causes it to be input to the `slice()` command following the pipe. The benefit of pipes will become especially apparent when we want to start stringing together multiple data processing operations into a single command.
+You will also notice something we haven't discussed before: `%>%`.  This is called a "pipe", which is commonly used within the tidyverse; you can read more [here](http://magrittr.tidyverse.org/). A pipe takes the output from one command and feeds it as input to the next command. In this case, simply writing the name of the data frame (my_data_frame) causes it to be input to the `slice()` command following the pipe. The benefit of pipes will become especially apparent when we want to start stringing together multiple data processing operations into a single command.
 
 In the previous example, no new variable was created - the output was simply printed to the screen, just like it would be if you typed the name of the variable.  If you wanted to save it to a new variable, you would use the `<-` assignment operator, like this:
 
 ```{r}
-myDataFrameSlice <- myDataFrame %>% 
+my_data_frame_slice <- my_data_frame %>% 
   slice(1:2) 
 
-myDataFrameSlice
+my_data_frame_slice
 
 ```
 
 #### Select a set of rows based on specific value(s)
 
 ```{r}
-myDataFrame %>% 
+my_data_frame %>% 
   filter(n == "russ")
 
 ```
@@ -127,7 +127,7 @@ myDataFrame %>%
 `filter()` is a function that retains only those rows that meet your stated criteria.  We can also filter for multiple criteria at once --- in this example, the `|` symbol indicates "or":
 
 ```{r}
-myDataFrame %>% 
+my_data_frame %>% 
   filter(n == "russ" | n == "lucy")
 
 ```
@@ -136,7 +136,7 @@ myDataFrame %>%
 #### Select a set of columns
 
 ```{r}
-myDataFrame %>% 
+my_data_frame %>% 
   select(x:y)
 ```
 
@@ -145,7 +145,7 @@ myDataFrame %>%
 You can also specify a vector of columns to select.
 
 ```{r}
-myDataFrame %>% 
+my_data_frame %>% 
   select(c(x,z))
 ```
 
@@ -154,7 +154,7 @@ myDataFrame %>%
 add a named row
 
 ```{r}
-tiffanyDataFrame <-
+tiffany_data_frame <-
   tibble(
     n = "tiffany",
     x = 13,
@@ -162,8 +162,8 @@ tiffanyDataFrame <-
     z = 15
   )
 
-myDataFrame %>% 
-  bind_rows(tiffanyDataFrame)
+my_data_frame %>% 
+  bind_rows(tiffany_data_frame)
 ```
 
 `bind_rows()` is a function that combines the rows from another dataframe to the current dataframe 
@@ -174,7 +174,7 @@ myDataFrame %>%
 Often we will want to either create a new variable based on an existing variable, or modify the value of an existing variable.  Within the tidyverse, we do this using a function called ```mutate()```.  Let's start with a toy example by creating a data frame containing a single variable.
 
 ```{r}
-toy_df <- data.frame(x = c(1,2,3,4))
+toy_df <- data.frame(x = c(1, 2, 3, 4))
 glimpse(toy_df)
 ```
 
@@ -183,7 +183,7 @@ Let's say that we wanted to create a new variable called `y` that would contain 
 ```{r}
 toy_df <- toy_df %>%
   # create a new variable called y that contains x*10
-  mutate(y = x*10)
+  mutate(y = x * 10)
 glimpse(toy_df)
 ```
 
@@ -201,11 +201,11 @@ We will use `mutate()` often so it's an important function to understand.
 
 Here we can use it with our example data frame to create a new variable that is the sum of several other variables.
 ```{r}
-myDataFrame <- 
-  myDataFrame %>%
+my_data_frame <- 
+  my_data_frame %>%
   mutate(total = x + y + z)
 
-kable(myDataFrame)
+kable(my_data_frame)
 ```
 
 mutate() is a function that creates a new variable in a data frame using the existing variables.  In this case, it creates a variable called total that is the sum of the existing variables x, y, and z.
@@ -214,11 +214,11 @@ mutate() is a function that creates a new variable in a data frame using the exi
 
 Adding a minus sign to the name of a variable within the `select()` command will remove that variable, leaving all of the others.
 ```{r}
-myDataFrame <- 
-  myDataFrame %>%
+my_data_frame <- 
+  my_data_frame %>%
   dplyr::select(-total)
 
-kable(myDataFrame)
+kable(my_data_frame)
 ```
 
 ## Tidyverse in action
@@ -407,7 +407,7 @@ For our purposes, we will just combine all 29 items together, rather than separa
 
 Note: I have removed the data from the graduate students and 5+ year students, since those would be too easily identifiable given how few there are.
 
-Let's first save the file path to the data. 
+Let's first create a variable containing the file path to the data. 
 
 ```{r}
 attitudeData_file <- 'data/statsAttitude.txt'
