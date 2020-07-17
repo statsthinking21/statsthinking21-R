@@ -97,7 +97,7 @@ sampMeans %>%
       fun = dnorm, n = sampSize,
       args = list(
         mean = mean(NHANES_adult$Height),
-        sd = sd(NHANES_adult$Height)/sqrt(sampSize)
+        sd = sd(NHANES_adult$Height) / sqrt(sampSize)
       ), 
       size = 1.5,
       color = "black",
@@ -133,8 +133,8 @@ sampSizes <- c(16, 32, 64, 128) # size of sample
 nsamps <- 1000 # number of samples we will take
 
 # create the data frame that specifies the analyses
-input_df <- tibble(sampSize=rep(sampSizes,nsamps),
-                      id=seq(nsamps*length(sampSizes)))
+input_df <- tibble(sampSize=rep(sampSizes, nsamps),
+                      id=seq(nsamps * length(sampSizes)))
 
 
 # create a function that samples and returns the mean
