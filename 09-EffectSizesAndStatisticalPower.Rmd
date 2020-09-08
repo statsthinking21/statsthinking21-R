@@ -35,7 +35,23 @@ NHANES_adult <-
 
 ```
 
-In this chapter we focus specifically on statistical power.
+In this chapter we focus on effect size and statistical power.
+
+## Computing confidence intervals
+
+### Theoretical
+
+### Bootstrap
+
+
+## Effect Size
+
+### Cohen's d
+
+### Pearson's r
+
+### Odds ratio
+
 
 ## Power analysis
 
