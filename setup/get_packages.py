@@ -14,7 +14,8 @@ for file in files:
     packages=packages+lines
 packages=list(set(packages))
 packages.append('bookdown')
-packages.remove('fiftystater')
+if 'fiftystater' in packages:
+    packages.remove('fiftystater')
 print('writing to package_installs.R')
 with open('dockerfile_includes','w') as f:
     for p in packages:
