@@ -1,14 +1,14 @@
 ---
-title: "Statistical Thinking for the 21st Century"
-author: "Copyright 2019 Russell A. Poldrack"
+title: "An R companion to Statistical Thinking for the 21st Century"
+author: "Copyright 2020 Russell A. Poldrack"
 date: "Draft: `r Sys.Date()`"
 knit: "bookdown::render_book"
 bibliography: ["psych10-book.bib"]
 biblio-style: "apalike"
 documentclass: book
 link-citations: yes
-github-repo: poldrack/psych10-book
-description: "A book about statistics."
+github-repo: statsthinking21/statsthinking21-R
+description: "A book about doing statistics using R."
 always_allow_html: yes
 fontsize: 12pt
 monofont: "Source Code Pro"
@@ -19,7 +19,7 @@ output:
   bookdown::gitbook:
     lib_dir: "book_assets"
     config:
-      edit: https://github.com/poldrack/psych10-book/edit/master/%s
+      edit: https://github.com/statsthinking21/statsthinking21-R/edit/master/%s
     includes:
       in_header:
         - google_analytics.html
