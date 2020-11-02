@@ -336,4 +336,4 @@ oringDf %>%
 
 *  [ggplot theme reference](http://ggplot2.tidyverse.org/reference/ggtheme.html)
 
-*  [knockoff tech themes](http://www.ggplot2-exts.org/ggtech.html)
+*  [knockoff tech themes](https://exts.ggplot2.tidyverse.org/)
