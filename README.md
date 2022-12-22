@@ -11,7 +11,7 @@ The online version is automatically rebuilt upon each push to this repository, u
 
 
 #### License
-This book is licensed using the [Creative Commons Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0) License](https://creativecommons.org/licenses/by-nc/2.0/).  A paper version of the book is currently under discussion.
+This book is licensed using the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)  License](https://creativecommons.org/licenses/by-nc/4.0/). 
 
 Comments/suggestions?  Please post an issue [here](https://github.com/poldrack/psych10-book/issues)
 
