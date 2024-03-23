@@ -305,7 +305,7 @@ ggplot(mpg) +
 
 In this section we will recreate Figure \@ref(fig:challengerTemps) from Chapter \@ref(data-visualization).  Here is the code to generate the figure; we will go through each of its sections below.
 
-```{r fig.width=8,fig.height=4,out.height='50%'}
+```{r challengerTemps, fig.cap="Damage index at different temperature.", fig.width=8,fig.height=4,out.height='50%'}
 oringDf <- read.table("data/orings.csv", sep = ",",
                       header = TRUE)
 

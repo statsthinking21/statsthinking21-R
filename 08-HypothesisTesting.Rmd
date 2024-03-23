@@ -37,7 +37,7 @@ NHANES_adult <-
 
 ```
 
-## Simple example: Coin-flipping (Section \@ref(randomization-very-simple)) {#coin-flipping}
+## Simple example: Coin-flipping (Section \@ref(randomization-very-simple)) {#randomization-very-simple}
 
 Let's say that we flipped 100 coins and observed 70 heads. We would like to use these data to test the hypothesis that the true probability is 0.5.
 
