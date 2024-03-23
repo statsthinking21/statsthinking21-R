@@ -39,7 +39,7 @@ NHANES_adult <-
 
 
 
-## A simple example (Section \@ref(doing-bayesian-estimation))
+## A simple example (Section \@ref(doing-bayesian-estimation)) {#doing-bayesian-estimation}
 
 
 
@@ -79,7 +79,7 @@ bayes_df$posterior <-
 ```
 
 
-## Estimating posterior distributions (Section \@ref(estimating-posterior-distributions))
+## Estimating posterior distributions (Section \@ref(estimating-posterior-distributions)) {#estimating-posterior-distributions}
 
 ```{r}
 # create a table with results
@@ -181,7 +181,7 @@ ggplot(bayesDf,aes(steps,posteriors)) +
 
 ```
 
-## Bayes factors (Section \@ref(Bayes-factors))
+## Bayes factors (Section \@ref(Bayes-factors)) {#Bayes-factors}
 
 Example showing how BFs and p-values relate
 

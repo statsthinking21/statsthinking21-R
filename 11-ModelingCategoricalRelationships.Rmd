@@ -39,17 +39,6 @@ NHANES_adult <-
 
 ```
 
-## The Pearson Chi-squared test (Section \@ref(chi-squared-test))
+## The Pearson Chi-squared test (Section \@ref(chi-squared-test)) {#chi-squared-test}
 
-```{r}
-
-```
-
-
-
-## Two-way tests (Section \@ref(two-way-test})
-
-```{r}
-
-```
-
+## Two-way tests (Section \@ref(two-way-test}) {#two-way-test}

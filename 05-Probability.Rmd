@@ -48,7 +48,7 @@ p1isTrue
 
 ```
 
-## Empirical frequency (Section \@ref(empirical-frequency))
+## Empirical frequency (Section \@ref(empirical-frequency)) {#empirical-frequency}
 
 Let's walk through how we computed empirical frequency of rain in San Francisco.
 
@@ -87,7 +87,7 @@ pRainInSF <-
 pRainInSF
 ```
 
-## Conditional probability (Section \@ref(conditional-probability))
+## Conditional probability (Section \@ref(conditional-probability)) {#conditional-probability}
 
 Let's determine the conditional probability of someone being unhealthy, given that they are over 70 years of age, using the NHANES dataset.  Let's create a new data frame that only contains people over 70 years old.
 
