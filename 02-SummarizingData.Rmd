@@ -8,7 +8,7 @@ output:
   html_document: default
 ---
 
-# Summarizing data using R (with Lucy King)
+# Summarizing data using R (with Lucy King) {#summarizing-data}
 
 This chapter will introduce you to how to summarize data using R, as well as providing an introduction to a popular set of R tools known as the "Tidyverse."
 
@@ -289,7 +289,7 @@ This new line overwrote the old value of `PhysActive` with a version that has be
 
 Now we are ready to start summarizing data!
 
-## Computing a frequency distribution (Section \@ref(frequency-distributions))
+## Computing a frequency distribution (Section \@ref(frequency-distributions)) {#frequency-distributions}
 
 We would like to compute a frequency distribution showing how many people report being either active or inactive.  The following statement is fairly complex so we will step through it one bit at a time.
 
@@ -360,7 +360,7 @@ PhysActive_table <- PhysActive_table %>%
 kable(PhysActive_table, digits=2)
 ```
 
-## Computing a cumulative distribution (Section \@ref(cumulative-distributions))
+## Computing a cumulative distribution (Section \@ref(cumulative-distributions)) {#cumulative-distributions}
 
 Let's compute a cumulative distribution for the `SleepHrsNight` variable in NHANES.  This looks very similar to what we saw in the previous section.  
 

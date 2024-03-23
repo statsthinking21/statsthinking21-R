@@ -8,7 +8,7 @@ output:
   html_document: default
 ---
 
-# Data visualization using R (with Anna Khazenzon)
+# Data visualization using R (with Anna Khazenzon) {#data-visualization}
 
 ```{r echo=FALSE,warning=FALSE,message=FALSE}
 library(tidyverse)
@@ -303,9 +303,9 @@ ggplot(mpg) +
 
 ## Creating a more complex plot
 
-In this section we will recreate Figure \@ref(fig:challengerTemps) from Chapter \@ref{data-visualization}.  Here is the code to generate the figure; we will go through each of its sections below.
+In this section we will recreate Figure \@ref(fig:challengerTemps) from Chapter \@ref(data-visualization).  Here is the code to generate the figure; we will go through each of its sections below.
 
-```{r fig.width=8,fig.height=4,out.height='50%'}
+```{r challengerTemps, fig.cap="Damage index at different temperature.", fig.width=8,fig.height=4,out.height='50%'}
 oringDf <- read.table("data/orings.csv", sep = ",",
                       header = TRUE)
 
