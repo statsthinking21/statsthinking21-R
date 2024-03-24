@@ -18,6 +18,7 @@ library(fivethirtyeight)
 library(BayesFactor)
 library(lme4)
 library(lmerTest)
+library(lsmeans)
 library(cowplot)
 library(knitr)
 library(pwr)
@@ -42,7 +43,7 @@ NHANES_adult <-
 
 ```
 
-## Testing the value of a single mean (Section \@ref(single-mean))
+## Testing the value of a single mean (Section \@ref(single-mean)) {#single-mean}
 
 In this example, we will show multiple ways to test a hypothesis about the value of a single mean.  As an example, let's test whether the mean systolic blood pressure (BP) in the NHANES dataset (averaged over the three measurements that were taken for each person) is greater than 120 mm, which is the standard value for normal systolic BP.
 
@@ -131,7 +132,7 @@ ttestBF(NHANES_BP_sample$BPSysAve,
 This tells us that our result doesn't provide particularly strong evidence for either the null or alternative hypothesis; that is, it's inconclusive.
 
 
-## Comparing two means (Section \@ref(comparing-two-means))
+## Comparing two means (Section \@ref(comparing-two-means)) {#comparing-two-means}
 
 To compare two means from independent samples, we can use the two-sample t-test. Let's say that we want to compare blood pressure of smokers and non-smokers; we don't have an expectation for the direction, so we will use a two-sided test.  First let's perform a power analysis, again for a small effect:
 
@@ -180,7 +181,7 @@ ttestBF(formula=BPSysAve ~ SmokeNowInt,
 
 This shows that there is very strong evidence against the null hypothesis of no difference.
 
-## The t-test as a linear model (Section \@ref(ttest-linear-model))
+## The t-test as a linear model (Section \@ref(ttest-linear-model)) {#ttest-linear-model}
 
 We can also use `lm()` to implement these t-tests.  
 
@@ -204,7 +205,7 @@ summary(lm_ttest_result)
 
 This gives the same p-value for the SmokeNowYes variable as it did for the two-sample t-test above.
 
-## Comparing paired observations (Section \@ref(paired-ttests))
+## Comparing paired observations (Section \@ref(paired-ttests)) {#paired-ttests}
 
 Let's look at how to perform a paired t-test in R.  In this case, let's generate some data for a set of individuals on two tests, where each indivdual varies in their overall ability, but there is also a practice effect such that performance on the second test is generally better than the first. 
 
@@ -266,7 +267,7 @@ summary(paired_test_lmer)
 ```
 This gives a similar answer to the standard paired t-test.  The advantage is that it's more flexible, allowing us to perform *repeated measures* analyses, as we will see below.
 
-## Analysis of variance (Section \@ref(ANOVA))
+## Analysis of variance (Section \@ref(ANOVA)) {#ANOVA}
 
 Often we want to compare several different means, to determine whether any of them are different from the others. In this case, let's look at the data from NHANES to determine whether Marital Status is related to sleep quality. First we clean up the data:
 
@@ -317,7 +318,7 @@ leastsquare <- emmeans(lm_sleep_marriage,
  
 # display the results by grouping using letters
 
-CLD(leastsquare$emmeans, 
+cld(leastsquare$emmeans, 
     alpha=.05,  
     Letters=letters)
 

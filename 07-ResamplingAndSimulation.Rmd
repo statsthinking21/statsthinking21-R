@@ -36,7 +36,7 @@ NHANES_adult <- NHANES %>%
 
 In this chapter we will use R to undestand how to resample data and perform numerical simulations.
 
-## Generating random samples (Section \@ref(generating-random-numbers))
+## Generating random samples (Section \@ref(generating-random-numbers)) {#generating-random-numbers}
 
 Here we will generate random samples from a number of different distributions and plot their histograms.
 

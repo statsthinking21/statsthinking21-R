@@ -44,7 +44,7 @@ NHANES_adult <-
 ```
 
 
-## Linear regression (Section \@ref(linear-regression))
+## Linear regression (Section \@ref(linear-regression)) {#linear-regression}
 
 To perform linear regression in R, we use the `lm()` function.  Let's generate some data and use this function to compute the linear regression solution.
 
@@ -78,7 +78,7 @@ We should see three things in the `lm()` results:
 * The residual standard error should be roughly similar to the noise standard deviation that we specified
 
 
-## Model criticism and diagnostics (Section \@ref(model-criticism))
+## Model criticism and diagnostics (Section \@ref(model-criticism)) {#model-criticism}
 
 Once we have fitted the model, we want to look at some diagnostics to determine whether the model is actually fitting properly.  We can do this using the `autoplot()` function from the `ggfortify` package.
 
@@ -214,7 +214,7 @@ CrossTable(disease_df$prediction,
 
 This shows us that of the 500 people who had heart attacks, the model corrected predicted a heart attack for 343 of them.  It also predicted heart attacks for 168 people who didn't have them, and it failed to predict a heart attack for 157 people who had them. This highlights the distinction that we mentioned before between statistical and practical significance; even though the biomarker shows a highly significant relationship to heart attacks, it's ability to predict them is still relatively poor.  As we will see below, it gets even worse when we try to generalize this to a new group of people.
 
-## Cross-validation (Section \@ref(cross-validation))
+## Cross-validation (Section \@ref(cross-validation)) {#cross-validation}
 
 Cross-validation is a powerful technique that allows us to estimate how well our results will generalize to a new dataset. Here we will build our own crossvalidation code to see how it works, continuing the logistic regression example from the previous section.
 
