@@ -15,7 +15,6 @@ output:
 library(tidyverse)
 library(ggplot2)
 library(fivethirtyeight)
-library(BayesMed)
 library(cowplot)
 library(knitr)
 
