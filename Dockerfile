@@ -27,7 +27,6 @@ RUN echo 'install.packages(c( \
 "pander", \
 "DiagrammeR", \
 "caret", \
-"BayesMed", \
 "modelr", \
 "lmerTest", \
 "lme4", \
