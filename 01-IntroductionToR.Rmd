@@ -1,22 +1,22 @@
 ---
 output:
-  pdf_document: default
+  html_document: default
   bookdown::gitbook:
     lib_dir: "book_assets"
     includes:
       in_header: google_analytics.html
-  html_document: default
+  pdf_document: default
 ---
 
 # Introduction to R
 
 R is a computer programming language that was purpose-built for statistical data analysis.
 The name "R" is a play on the names of the two authors of the software package (Ross Ihaka and Robert Gentleman) as well as an homage to an older statistical software package called "S".
-R has become one of the most popular programming languages for statistical analysis and "data science".  Unlike general-purpose programming languages such as Python or Java, R is purpose-built for statistics.  That doesn't mean that you can't do more general things with it, but the place where it really shines is in data analysis and statistics.  
+R has become one of the most popular programming languages for statistical analysis and "data science", which refers to the broader enterprise of working with and analyzing data.  Unlike general-purpose programming languages such as Python or Java, R is purpose-built for statistics.  That doesn't mean that you can't do more general things with it, but the place where it really shines is in data analysis and statistics.  
 
 ## Why programming is hard to learn
 
-Programming a computer is a skill, just like playing a musical instrument or speaking a second language. And just like those skills, it takes a lot of work to get good at it --- the only way to acquire a skill is through practice.  There is nothing special or magical about people who are experts, other than the quality and quantity of their experience! However, not all practice is equally effective.  A large amount of psychological research has shown that practice needs to be *deliberate*, meaning that it focuses on developing the specific skills that one needs to perform the skill, at a level that is always pushing one's ability.
+Programming a computer is a skill, just like playing a musical instrument or speaking a second language. And just like those skills, it takes a lot of work to get good at it --- the only way to acquire a skill is through practice.  There is nothing special or magical about people who are experts, other than the quality and quantity of their experience! However, not all practice is equally effective.  A large amount of psychological research has shown that practice needs to be *deliberate*, meaning that it focuses on developing the specific skills that one needs to perform the activity, at a level that is always pushing one's ability.
 
 If you have never programmed before, then it's going to seem hard, just as it would seem hard for a native English speaker to start speaking Mandarin.  However, just as a beginning guitarist needs to learn to play their scales, we will teach you how to perform the basics of programming, which you can then use to do more powerful things.
 
@@ -26,7 +26,7 @@ The hardest part of programming is figuring out why something didn't work, which
 
 ### Use the web
 
-In particular, you should take advantage of the fact that there are millions of people programming in R around the world, so nearly any error message you see has already been seen by someone else.  Whenever I experience an error that I don't understand, the first thing that I do is to copy and paste the error message into a search engine. Often this will provide several pages discussing the problem and the ways that people have solved it.
+In particular, you should take advantage of the fact that there are millions of people programming in R around the world, so nearly any error message you see has already been seen by someone else.  Whenever I experience an error that I don't understand, the first thing that I do is to copy and paste the error message into a search engine. Often this will provide several links discussing the problem and the ways that people have solved it.
 
 ### Rubber duck debugging
 
@@ -34,7 +34,9 @@ The idea behind *rubber duck debugging* is to pretend that you are trying to exp
 
 ## Using RStudio
 
-When I am using R in my own work, I generally use a free software package called [RStudio](https://rstudio.com/), which provides a number of nice tools for working with R. In particular, RStudio provides the ability to create "notebooks" that mix together R code and text (formatted using the [Markdown](https://daringfireball.net/projects/markdown/) text formatting system).  In fact, this book is written using exactly that system! You can see the R code used to generate this book [here](https://github.com/poldrack/psych10-book).
+When I am using R in my own work, I generally use a free software package called [RStudio](https://rstudio.com/), which provides a number of nice tools for working with R. In particular, RStudio provides the ability to create "notebooks" that mix together R code and text (formatted using the [Markdown](https://daringfireball.net/projects/markdown/) text formatting system).  In fact, this book is written using exactly that system! You can see the R code used to generate this book [here](https://statsthinking21.github.io/statsthinking21-R-site/).
+
+In some cases it m ay not be possible to install RStudio on one's computer (for example, if that computer is a Chromebook).  Another alteranative is to use an online platform for coding.  Two popular platforms that support R are [Google's Colab](https://colab.research.google.com/) and [Kaggle Kernels](https://www.kaggle.com/kernels).  
 
 ## Getting started with R
 
@@ -362,8 +364,7 @@ Rank,Country,GDP
 We can load a comma-delimited text file into R using the ```read.csv()``` function, which will accept either the location of a file on one's computer, or a URL for files that are located on the web:
 
 ```
-url < 'https://raw.githubusercontent.com/psych10/
-psych10/master/notebooks/Session03-IntroToR/gdp.csv'
+url < 'https://raw.githubusercontent.com/psych10/psych10/master/notebooks/Session03-IntroToR/gdp.csv'
 gdp_df <- read.csv(url)
 ```
 
