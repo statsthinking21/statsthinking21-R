@@ -9,7 +9,8 @@ RUN sudo apt-get dist-upgrade -y
 RUN sudo apt-get autoremove
 RUN apt-get install -y make git ssh
 RUN apt-get install  -y jags
-RUN apt-get install -y gsl-bin libgsl-dev libv8-3.14.5
+# RUN apt-get install -y gsl-bin libgsl-dev libv8-3.14.5
+RUN apt-get install -y gsl-bin libgsl-dev libnode-dev
 RUN apt-get install  -y libudunits2-0
 RUN apt-get install -y texlive-full
 
