@@ -52,7 +52,13 @@ RUN echo 'install.packages("https://cran.r-project.org/src/contrib/Archive/fifty
   repos=NULL,dependencies=TRUE)' > /tmp/packages2.R  && Rscript /tmp/packages2.R
 
 # BayesMed was removed from CRAN so must be installed from the archive
-
+RUN echo 'install.packages(c( \
+"R2jags", \
+"QRM", \
+"polspline", \
+"MCMCpack"), \
+  repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R && \
+  Rscript /tmp/packages.R
 RUN echo 'install.packages("https://cran.r-project.org/src/contrib/Archive/BayesMed/BayesMed_1.0.1.tar.gz",\
   repos=NULL,dependencies=TRUE)' > /tmp/packages2.R  && Rscript /tmp/packages2.R
 
