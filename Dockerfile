@@ -40,6 +40,7 @@ RUN echo 'install.packages(c( \
 "reshape2", \
 "NHANES", \
 "fivethirtyeight", \
+"gmodels", \
 "sfsmisc", \
 "bookdown",\
 "ggfortify"), \
