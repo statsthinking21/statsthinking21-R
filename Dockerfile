@@ -28,7 +28,6 @@ RUN echo 'install.packages(c( \
 "DiagrammeR", \
 "caret", \
 "modelr", \
-"lmerTest", \
 "pwr", \
 "BayesFactor", \
 "boot", \
@@ -47,7 +46,11 @@ RUN echo 'install.packages(c( \
 
 # lme4 dropped repos https://cran.us.r-project.org
 
-RUN echo 'install.packages("lme4", dependencies=TRUE)' >> /tmp/packages.R && Rscript /tmp/packages.R
+RUN echo 'install.packages("lme4", dependencies=TRUE)' >> /tmp/packages.R
+
+# lmerTest repos updated to https://cran.rstudio.com
+
+RUN echo 'install.packages("lmerTest", repos = "https://cran.rstudio.com", dependencies = TRUE)' >> /tmp/packages.R && Rscript /tmp/packages.R
 
 # fiftystater was removed from CRAN so must be installed from the archive
 
